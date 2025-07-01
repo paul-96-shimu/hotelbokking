@@ -20,6 +20,8 @@ import Authprovider from './Compontents/Authprovider/Authprovider.jsx';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute.jsx';
 import RoomDetails from './Pages/RoomDetails.jsx';
 import Updated from './Pages/Updated.jsx';
+import Contact from './Pages/Contact.jsx';
+import Aboutus from './Pages/Aboutus.jsx';
 
 const router = createBrowserRouter([
   {
@@ -58,6 +60,14 @@ const router = createBrowserRouter([
       {
         path: "register",
         Component: Register
+      },
+      {
+        path: "contact",
+        Component: Contact
+      },
+      {
+        path: "about",
+        Component: Aboutus
       },
     ]
   },
