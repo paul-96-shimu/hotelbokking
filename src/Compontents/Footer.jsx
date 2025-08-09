@@ -9,7 +9,7 @@ import { FaInstagramSquare } from "react-icons/fa";
 
 const Footer = () => {
     return (
-        <footer className="bg-base-200 text-base-content mt-10">
+        <footer className=" text-base-content mt-10 bg-blue-100">
             <div className="footer p-10 max-w-7xl mx-auto flex flex-col md:flex-row flex-wrap gap-10 md:justify-between">
                 <aside className="max-w-sm">
                     <h2 className="text-2xl font-bold mb-2">🏨 HotelX</h2>
@@ -46,7 +46,7 @@ const Footer = () => {
                 </nav>
             </div>
 
-            <div className="footer footer-center p-4 bg-base-300 text-sm text-base-content">
+            <div className="footer footer-center p-4  text-sm text-base-content">
                 <p>© {new Date().getFullYear()} HotelX. All rights reserved.</p>
             </div>
         </footer>

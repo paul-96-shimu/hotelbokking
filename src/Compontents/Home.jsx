@@ -31,7 +31,8 @@ const Home = () => {
     };
 
     return (
-        <div className='container mx-auto py-8'>
+        <div>
+            <div className='container mx-auto py-8'>
             <SpecialOfferModal></SpecialOfferModal>
             <Banner />
 
@@ -54,7 +55,10 @@ const Home = () => {
                 <p className="text-center text-gray-500">No reviews available</p>
             )}
 
-            <Footer />
+          
+        </div>
+
+          <Footer />
         </div>
     );
 
