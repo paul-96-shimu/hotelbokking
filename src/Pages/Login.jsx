@@ -40,7 +40,7 @@ const Login = () => {
                 });
 
                 setTimeout(() => {
-                    navigate("/rooms");
+                    navigate("/");
 
                 }, 1500);
 

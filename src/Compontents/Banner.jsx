@@ -10,18 +10,22 @@ const Banner = () => {
 
 
         <div className='bg-gradient-to-b from-white via-slate-50 to-white'>
-
             {/* Hero / Carousel Section */}
-            <div className="carousel rounded-xl overflow-hidden shadow-lg  h-[70vh]">
+            <div className="carousel rounded-xl overflow-hidden  shadow-lg h-[70vh]">
                 {[
                     'https://i.ibb.co/1wH7McY/hotel-img3.jpg',
                     'https://i.ibb.co/NgHcBw8g/hotel-img2.jpg',
                     'https://i.ibb.co/dJg9kqyp/hotel-img1.jpg',
                     'https://i.ibb.co/d0ttR8VR/hotel4.jpg'
                 ].map((img, idx) => (
-                    <div key={idx} id={`slide${idx + 1}`} className="carousel-item relative w-full">
-                        <img src={img} alt={`Slide ${idx + 1}`} className="w-full h-full object-cover" />
-                        <div className="absolute inset-0  bg-opacity-40 flex flex-col justify-center items-center text-white text-center p-4">
+                    <div key={idx} id={`slide${idx + 1}`} className="carousel-item relative w-full h-[70vh]">
+                        <img
+                            src={img}
+                            alt={`Slide ${idx + 1}`}
+                            className="w-full h-full object-cover"
+                            style={{ aspectRatio: '16/9' }}
+                        />
+                        <div className="absolute inset-0 bg-opacity-40 flex flex-col justify-center items-center text-white text-center p-4">
                             <h2 className="text-4xl md:text-5xl font-bold mb-4">Luxurious Stay Awaits</h2>
                             <p className="text-lg mb-6 max-w-xl">
                                 Enjoy 5-star comfort with breathtaking views and world-class amenities.

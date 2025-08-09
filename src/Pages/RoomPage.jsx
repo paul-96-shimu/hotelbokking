@@ -1,52 +1,78 @@
-import React, { useContext, useState } from 'react';
-import { useLoaderData, useNavigate } from 'react-router';
+
+import { useParams, useNavigate, Link } from 'react-router';
 import { IoStar } from "react-icons/io5";
 import { FaSackDollar } from "react-icons/fa6";
-import Swal from 'sweetalert2';
-import BookigModal from './BookigModal';
-import { AuthContex } from '../Compontents/Authprovider/Authcontext';
 
-const RoomDetails = () => {
-    const roomDetails = useLoaderData();
-    const [isModalOpen, setIsModalOpen] = useState(false);
-    const { user } = useContext(AuthContex);
+// Dummy data
+const dummyRooms = [
+    {
+        id: '1',
+        name: 'Luxury Suite',
+        description: 'A beautiful and spacious suite with sea view.',
+        image: 'https://via.placeholder.com/600x400?text=Luxury+Suite',
+        price: 150,
+        isAvailable: true,
+        reviews: [
+            { user: 'Alice', rating: 5, comment: 'Amazing experience!' },
+            { user: 'Bob', rating: 4, comment: 'Very comfortable stay.' },
+        ],
+    },
+    {
+        id: '2',
+        name: 'Cozy Standard Room',
+        description: 'A cozy room perfect for couples and solo travelers.',
+        image: 'https://via.placeholder.com/600x400?text=Cozy+Room',
+        price: 80,
+        isAvailable: false,
+        reviews: [
+            { user: 'Charlie', rating: 3, comment: 'Good for short stays.' },
+        ],
+    },
+    {
+        id: '3',
+        name: 'Family Deluxe',
+        description: 'Spacious room with multiple beds, ideal for families.',
+        image: 'https://via.placeholder.com/600x400?text=Family+Deluxe',
+        price: 120,
+        isAvailable: true,
+        reviews: [
+            { user: 'David', rating: 5, comment: 'Perfect for our family vacation!' },
+            { user: 'Eva', rating: 4, comment: 'Very comfortable and clean.' },
+        ],
+    },
+    {
+        id: '4',
+        name: 'Economy Single Room',
+        description: 'Affordable and compact room for solo travelers.',
+        image: 'https://via.placeholder.com/600x400?text=Economy+Single+Room',
+        price: 50,
+        isAvailable: true,
+        reviews: [
+            { user: 'Frank', rating: 3, comment: 'Good value for the price.' },
+        ],
+    },
+];
+
+const RoomPage = () => {
+    const { id } = useParams();
     const navigate = useNavigate();
+
+
+    const handleBookNow = () => {
+        navigate('/rooms');
+    };
+
+    const roomDetails = dummyRooms.find(room => room.id === id);
 
     if (!roomDetails) {
         return (
             <div className="text-center p-10">
                 <p>Room details not found.</p>
+                <Link to="/" className="text-blue-600 underline">Go back Home</Link>
             </div>
         );
     }
 
-    const handleConfirmBooking = () => {
-        Swal.fire({
-            icon: 'success',
-            title: 'Booking Successful 🎉',
-            showConfirmButton: false,
-            timer: 1500
-        });
-        setIsModalOpen(false);
-    };
-
-    const handleBookNow = () => {
-        if (!user) {
-            navigate('/login');
-            return;
-        }
-
-        if (!roomDetails.isAvailable) {
-            Swal.fire({
-                icon: 'error',
-                title: 'Already Booked!',
-                text: 'This room is no longer available.',
-            });
-            return;
-        }
-
-        setIsModalOpen(true);
-    };
 
     return (
         <div className="flex justify-center items-center min-h-screen bg-gray-100 px-4">
@@ -102,14 +128,9 @@ const RoomDetails = () => {
                 </div>
             </div>
 
-            <BookigModal
-                isOpen={isModalOpen}
-                onClose={() => setIsModalOpen(false)}
-                roomDetails={roomDetails}
-                onConfirm={handleConfirmBooking}
-            />
+
         </div>
     );
 };
 
-export default RoomDetails;
+export default RoomPage;

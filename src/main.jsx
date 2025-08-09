@@ -22,6 +22,7 @@ import RoomDetails from './Pages/RoomDetails.jsx';
 import Updated from './Pages/Updated.jsx';
 import Contact from './Pages/Contact.jsx';
 import Aboutus from './Pages/Aboutus.jsx';
+import RoomPage from './Pages/RoomPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -52,6 +53,14 @@ const router = createBrowserRouter([
         Component: RoomDetails,
         loader: ({ params }) =>
           fetch(`https://hotel-booking-serversite.vercel.app/hotel/${params.id}`)
+      },
+
+
+
+       {
+        path: "/room/:id",
+        Component: RoomPage,
+     
       },
       {
         path: "login",
