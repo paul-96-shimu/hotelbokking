@@ -13,10 +13,10 @@ const Banner = () => {
             {/* Hero / Carousel Section */}
             <div className="carousel rounded-xl overflow-hidden  shadow-lg h-[70vh]">
                 {[
-                    'https://i.ibb.co/1wH7McY/hotel-img3.jpg',
-                    'https://i.ibb.co/NgHcBw8g/hotel-img2.jpg',
-                    'https://i.ibb.co/dJg9kqyp/hotel-img1.jpg',
-                    'https://i.ibb.co/d0ttR8VR/hotel4.jpg'
+                    'https://i.ibb.co/bMF5Rjhm/hotel1.jpg',
+                    'https://i.ibb.co/xKSG6hq4/hotel2.jpg',
+                    'https://i.ibb.co/HfFC6CTd/hotel3.jpg',
+                    'https://i.ibb.co/gZbMhLPn/hotel5.jpg'
                 ].map((img, idx) => (
                     <div key={idx} id={`slide${idx + 1}`} className="carousel-item relative w-full h-[70vh]">
                         <img
