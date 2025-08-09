@@ -28,7 +28,7 @@ const SpecialOfferModal = () => {
                 <h2 className="text-2xl font-bold mb-4 text-center">Special Offers & Promotions</h2>
 
                 <img
-                    src="https://i.ibb.co/9mNj8d1Q/special.jpg"
+                    src="https://i.ibb.co/7tJFTnhS/hotelroom4.jpg"
                     alt="Special Offer"
                     className="w-full mb-4 rounded"
                 />

@@ -9,7 +9,7 @@ const dummyRooms = [
         id: '1',
         name: 'Luxury Suite',
         description: 'A beautiful and spacious suite with sea view.',
-        image: 'https://via.placeholder.com/600x400?text=Luxury+Suite',
+        image: 'https://i.ibb.co/HTjxGFvv/hotelroom2.jpg',
         price: 150,
         isAvailable: true,
         reviews: [
@@ -21,7 +21,7 @@ const dummyRooms = [
         id: '2',
         name: 'Cozy Standard Room',
         description: 'A cozy room perfect for couples and solo travelers.',
-        image: 'https://via.placeholder.com/600x400?text=Cozy+Room',
+        image: 'https://i.ibb.co/27k2HPWv/hoteroom1.jpg',
         price: 80,
         isAvailable: false,
         reviews: [
@@ -32,7 +32,7 @@ const dummyRooms = [
         id: '3',
         name: 'Family Deluxe',
         description: 'Spacious room with multiple beds, ideal for families.',
-        image: 'https://via.placeholder.com/600x400?text=Family+Deluxe',
+        image: 'https://i.ibb.co/S4xBYtfJ/hotelromm3.jpg',
         price: 120,
         isAvailable: true,
         reviews: [
@@ -44,7 +44,7 @@ const dummyRooms = [
         id: '4',
         name: 'Economy Single Room',
         description: 'Affordable and compact room for solo travelers.',
-        image: 'https://via.placeholder.com/600x400?text=Economy+Single+Room',
+        image: 'https://i.ibb.co/7tJFTnhS/hotelroom4.jpg',
         price: 50,
         isAvailable: true,
         reviews: [
