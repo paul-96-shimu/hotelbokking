@@ -9,6 +9,7 @@ import { AuthContex } from '../Compontents/Authprovider/Authcontext';
 const RoomDetails = () => {
     const roomDetails = useLoaderData();
     const [isModalOpen, setIsModalOpen] = useState(false);
+     const [selectedDate, setSelectedDate] = useState(null); 
     const { user } = useContext(AuthContex);
     const navigate = useNavigate();
 
@@ -106,6 +107,9 @@ const RoomDetails = () => {
                 isOpen={isModalOpen}
                 onClose={() => setIsModalOpen(false)}
                 roomDetails={roomDetails}
+
+                selectedDate={selectedDate}
+                setSelectedDate={setSelectedDate}
                 onConfirm={handleConfirmBooking}
             />
         </div>

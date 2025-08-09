@@ -22,6 +22,7 @@ const BookigModal = ({ isOpen, onClose, roomDetails, selectedDate, setSelectedDa
 
 
     const handleConfirmBooking = async () => {
+        
         const bookingData = {
             roomId: roomDetails._id,
             roomName: roomDetails.name,
